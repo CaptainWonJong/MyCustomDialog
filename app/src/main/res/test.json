@@ -1,0 +1,14 @@
+DexPathList[
+  [
+    zip
+    file
+    "/data/app/com.kt.ollehfamilybox-vXw5UjCNGJa5XmMqjxH3Rg==/base.apk"
+  ],
+  nativeLibraryDirectories=
+  [
+    /data/app/com.kt.ollehfamilybox-vXw5UjCNGJa5XmMqjxH3Rg==/lib/arm64,
+    /data/app/com.kt.ollehfamilybox-vXw5UjCNGJa5XmMqjxH3Rg==/base.apk!/lib/arm64-v8a,
+    /system/lib64,
+    /vendor/lib64
+  ]
+]

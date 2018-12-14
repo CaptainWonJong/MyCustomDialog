@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape android:layout_width="match_parent" android:layout_height="match_parent">
+            <solid android:color="@color/white" />
+            <corners android:radius="1000dp" />
+            <stroke android:width="@dimen/dimen_1" android:color="#666666" />
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape android:layout_width="match_parent" android:layout_height="match_parent">
+            <solid android:color="#19000000" />
+            <corners android:radius="1000dp" />
+            <stroke android:width="@dimen/dimen_1" android:color="#666666" />
+        </shape>
+    </item>
+</selector>
