@@ -3,6 +3,7 @@ package captain.wonjong.testproj;
 import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -188,7 +189,7 @@ public class MyDialog implements View.OnClickListener {
             textView.setVisibility(View.GONE);
         } else {
             textView.setVisibility(View.VISIBLE);
-            textView.setText(text);
+            textView.setText(Html.fromHtml(text));
         }
     }
 
