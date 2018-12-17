@@ -45,7 +45,7 @@ public class MyDialog implements View.OnClickListener {
         mDialog.setContentView(R.layout.my_dialog);
 
         initView();
-        setData(null, title, content, isLeftBtnVisible);
+        setData(title, content,null, isLeftBtnVisible);
 
         try {
             mDialog.show();

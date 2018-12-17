@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mMainBinding;
     private MainViewModel       mMainViewModel;
 
+    private MyDialog mDialog;
+    private MyDialog mDialog2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +38,15 @@ public class MainActivity extends AppCompatActivity {
 
         mMainViewModel.mBtnText.setValue("Click!");
 
+
+
+        mDialog = MyDialog.getInstance();
+        mDialog2 = MyDialog.getInstance();
+
         mMainViewModel.mIsBtnClick.observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(@Nullable Boolean aBoolean) {
+                mDialog.showDialog(mContext, "asdfasdf", "asdfasdf", false);
 
             }
         });
