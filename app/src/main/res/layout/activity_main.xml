@@ -4,23 +4,44 @@
     <data>
         <variable
             name="vm"
-            type="captain.wonjong.testproj.MainViewModel" />
+            type="captain.wonjong.testproj.vm.MainViewModel" />
     </data>
 
-    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#55880000"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:onClick="@{() -> vm.onMainBtnClick()}"
-            android:text="@{vm.mBtnText}">
+            android:onClick="@{() -> vm.onMainBtnClick(true)}"
+            android:text="visible">
         </Button>
-    </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="@{() -> vm.onMainBtnClick(false)}"
+            android:text="gone">
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:visibility="@{vm.viewStatus}"
+            android:text="asdfasdf"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.responseData}"/>
+    </LinearLayout>
 </layout>

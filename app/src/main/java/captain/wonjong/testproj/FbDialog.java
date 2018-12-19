@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class MyDialog implements View.OnClickListener {
-    private static MyDialog uniqueInstance = new MyDialog();
+public class FbDialog implements View.OnClickListener {
+    private static FbDialog uniqueInstance = new FbDialog();
 
     private Dialog               mDialog;
     private Context              mContext;
@@ -33,11 +33,11 @@ public class MyDialog implements View.OnClickListener {
     private View                 mViewBtnLine;
     private Button               mBtnRight;
 
-    public static MyDialog getInstance() {
+    public static FbDialog getInstance() {
         return uniqueInstance;
     }
 
-    public MyDialog showDialog(@NonNull Context context, String title, String content, boolean isLeftBtnVisible) {
+    public FbDialog showDialog(@NonNull Context context, String title, String content, boolean isLeftBtnVisible) {
         mContext = context;
 
         mDialog = new Dialog(mContext, android.R.style.Theme_Translucent_NoTitleBar);
@@ -57,7 +57,7 @@ public class MyDialog implements View.OnClickListener {
         return getInstance();
     }
 
-    public MyDialog showDialog(@NonNull Context context, String title, String content, Object topImageUrl, boolean isLeftBtnVisible) {
+    public FbDialog showDialog(@NonNull Context context, String title, String content, Object topImageUrl, boolean isLeftBtnVisible) {
         mContext = context;
 
         mDialog = new Dialog(mContext, android.R.style.Theme_Translucent_NoTitleBar);
@@ -109,7 +109,7 @@ public class MyDialog implements View.OnClickListener {
      * @param checkBoxText
      * @return
      */
-    public MyDialog setCheckBox(String checkBoxText) {
+    public FbDialog setCheckBox(String checkBoxText) {
         mLlCheckBox.setVisibility(View.VISIBLE);
         mCheckBox.setVisibility(View.VISIBLE);
         mTvCheckBoxText.setText(checkBoxText);
@@ -121,7 +121,7 @@ public class MyDialog implements View.OnClickListener {
      * @param onLeftBtnClickListener
      * @return
      */
-    public MyDialog setLeftBtnOnClickListener(String leftBtnText, View.OnClickListener onLeftBtnClickListener) {
+    public FbDialog setLeftBtnOnClickListener(String leftBtnText, View.OnClickListener onLeftBtnClickListener) {
         setBtnOnClickListener(mBtnLeft, leftBtnText, onLeftBtnClickListener);
         mViewBtnLine.setVisibility(mBtnLeft.getVisibility());
         return getInstance();
@@ -132,7 +132,7 @@ public class MyDialog implements View.OnClickListener {
      * @param onRightBtnClickListener
      * @return
      */
-    public MyDialog setRightBtnOnClickListener(String rightBtnText, View.OnClickListener onRightBtnClickListener) {
+    public FbDialog setRightBtnOnClickListener(String rightBtnText, View.OnClickListener onRightBtnClickListener) {
         setBtnOnClickListener(mBtnRight, rightBtnText, onRightBtnClickListener);
         return getInstance();
     }
@@ -142,7 +142,7 @@ public class MyDialog implements View.OnClickListener {
      * @param onSubBtnClickListener
      * @return
      */
-    public MyDialog setSubBtnOnClickListener(String subBtnText, View.OnClickListener onSubBtnClickListener) {
+    public FbDialog setSubBtnOnClickListener(String subBtnText, View.OnClickListener onSubBtnClickListener) {
         setBtnOnClickListener(mBtnSub, subBtnText, onSubBtnClickListener);
         return getInstance();
     }
