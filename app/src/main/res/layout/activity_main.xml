@@ -13,14 +13,14 @@
         android:layout_height="match_parent"
         android:background="#55880000"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".view.MainActivity">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:onClick="@{() -> vm.onMainBtnClick(true)}"
+            android:onClick="@{() -> vm.onMainBtnClick(0)}"
             android:text="visible">
         </Button>
 
@@ -28,8 +28,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:onClick="@{() -> vm.onMainBtnClick(false)}"
+            android:onClick="@{() -> vm.onMainBtnClick(1)}"
             android:text="gone">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="@{() -> vm.onMainBtnClick(2)}"
+            android:text="go Navi">
         </Button>
 
         <TextView
@@ -43,5 +51,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{vm.responseData}"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            app:imageUrlDrawable="@{vm.imageUrl}"/>
     </LinearLayout>
 </layout>
